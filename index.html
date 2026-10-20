@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWU Voice | ระบบร้องเรียนแจ้งปัญหาภายใน มศว</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a class="brand" href="#" aria-label="SWU FIX หน้าหลัก">
+      <div class="brand-mark">SWU</div>
+      <div class="brand-text">
+        <strong>SWU Voice</strong>
+        <span>ระบบร้องเรียนแจ้งปัญหาภายในมหาวิทยาลัย</span>
+      </div>
+    </a>
+    <div class="university">
+      มหาวิทยาลัยศรีนครินทรวิโรฒ
+      <small>SRINAKHARINWIROT UNIVERSITY</small>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <span class="hero-label">CAMPUS SERVICE PORTAL</span>
+        <h1>แจ้งปัญหา ซ่อมแซม<br>เพื่อพื้นที่ที่ดีขึ้น</h1>
+        <p>
+          แจ้งปัญหาอาคาร สถานที่ และอุปกรณ์ภายในมหาวิทยาลัย
+          พร้อมติดตามความคืบหน้าได้ในที่เดียว
+        </p>
+        <a href="#service" class="hero-button">เริ่มต้นแจ้งปัญหา <span>→</span></a>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+        <div class="decoration-circle">SWU</div>
+        <div class="decoration-line"></div>
+      </div>
+    </section>
+
+    <section class="welcome">
+      <div>
+        <span class="section-kicker">MAINTENANCE CENTER</span>
+        <h2>ศูนย์รับแจ้งปัญหาภายในมหาวิทยาลัย</h2>
+        <p>เลือกบริการที่คุณต้องการได้จากด้านล่าง</p>
+      </div>
+      <div class="welcome-tag">บริการสำหรับชาว มศว</div>
+    </section>
+
+    <section id="service" class="service-grid">
+      <button class="service-card selected" data-page="report">
+        <span class="service-icon">＋</span>
+        <span class="service-title">แจ้งซ่อมใหม่</span>
+        <span class="service-description">แจ้งปัญหาที่พบภายในมหาวิทยาลัย</span>
+        <span class="service-link">เริ่มแจ้งซ่อม →</span>
+      </button>
+
+      <button class="service-card" data-page="track">
+        <span class="service-icon track-icon">≡</span>
+        <span class="service-title">ติดตามคำร้อง</span>
+        <span class="service-description">ตรวจสอบสถานะการดำเนินงาน</span>
+        <span class="service-link">ตรวจสอบสถานะ →</span>
+      </button>
+    </section>
+
+    <section id="report" class="content-card">
+      <div class="card-heading">
+        <div class="heading-icon">01</div>
+        <div>
+          <span class="section-kicker">NEW MAINTENANCE REQUEST</span>
+          <h2>แบบฟอร์มแจ้งซ่อม</h2>
+          <p>กรุณาระบุรายละเอียดให้ครบถ้วนเพื่อความรวดเร็วในการดำเนินงาน</p>
+        </div>
+      </div>
+
+      <div class="form-divider"></div>
+
+      <form id="reportForm">
+        <div class="form-grid">
+          <label>ชื่อผู้แจ้ง <span class="required">*</span>
+            <input name="name" required maxlength="100" placeholder="ชื่อ-นามสกุล">
+          </label>
+
+          <label>เบอร์โทรศัพท์หรืออีเมล <span class="required">*</span>
+            <input name="contact" required maxlength="120" placeholder="ช่องทางติดต่อกลับ">
+          </label>
+
+          <label>วิทยาเขต <span class="required">*</span>
+            <select name="campus" required>
+              <option value="">เลือกวิทยาเขต</option>
+              <option>ประสานมิตร</option>
+              <option>องครักษ์</option>
+              <option>อื่น ๆ</option>
+            </select>
+          </label>
+
+          <label>ประเภทปัญหา <span class="required">*</span>
+            <select name="category" required>
+              <option value="">เลือกประเภทปัญหา</option>
+              <option>ไฟฟ้าและแสงสว่าง</option>
+              <option>ประปาและน้ำรั่ว</option>
+              <option>เครื่องปรับอากาศ</option>
+              <option>อาคารและสถานที่</option>
+              <option>ห้องน้ำ</option>
+              <option>โต๊ะ เก้าอี้ และอุปกรณ์</option>
+              <option>อินเทอร์เน็ต</option>
+              <option>อื่น ๆ</option>
+            </select>
+          </label>
+
+          <label>อาคาร / สถานที่ <span class="required">*</span>
+            <input name="location" required maxlength="200" placeholder="ชื่ออาคาร ชั้น หรือห้อง">
+          </label>
+
+          <label>ระดับความเร่งด่วน <span class="required">*</span>
+            <select name="priority" required>
+              <option value="ปกติ">ปกติ</option>
+              <option value="เร่งด่วน">เร่งด่วน</option>
+              <option value="ฉุกเฉิน">ฉุกเฉิน / เสี่ยงอันตราย</option>
+            </select>
+          </label>
+
+          <label class="full">รายละเอียดปัญหา <span class="required">*</span>
+            <textarea name="details" rows="5" maxlength="2000" required
+              placeholder="โปรดอธิบายปัญหา ตำแหน่ง และข้อมูลที่เป็นประโยชน์ต่อการซ่อมแซม"></textarea>
+          </label>
+
+          <label class="full">รูปภาพประกอบ
+            <input id="photo" type="file" accept="image/*">
+            <small class="hint">รองรับรูปภาพขนาดไม่เกิน 1 MB</small>
+            <img id="preview" alt="ตัวอย่างรูปภาพ" hidden>
+          </label>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" required>
+          ยินยอมให้ใช้ข้อมูลเพื่อประสานงานและแก้ไขปัญหาที่แจ้ง
+        </label>
+
+        <div class="submit-area">
+          <button class="primary" id="submitBtn" type="submit">
+            ส่งคำร้อง <span>→</span>
+          </button>
+          <p id="message" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+
+    <section id="track" class="content-card" hidden>
+      <div class="card-heading">
+        <div class="heading-icon">02</div>
+        <div>
+          <span class="section-kicker">REQUEST TRACKING</span>
+          <h2>ติดตามสถานะคำร้อง</h2>
+          <p>กรอกเลขที่คำร้องเพื่อตรวจสอบความคืบหน้า</p>
+        </div>
+      </div>
+
+      <div class="form-divider"></div>
+
+      <form id="trackForm" class="search-form">
+        <label for="ticketId">เลขที่คำร้อง</label>
+        <div class="search-row">
+          <input id="ticketId" required placeholder="เช่น SWU-20261018-1234">
+          <button class="primary" type="submit">ค้นหา</button>
+        </div>
+      </form>
+
+      <div id="trackResult"></div>
+
+      <div class="status-guide">
+        <h3>ความหมายของสถานะ</h3>
+        <div class="status-list">
+          <span><i class="dot received"></i>รับเรื่องแล้ว</span>
+          <span><i class="dot checking"></i>กำลังตรวจสอบ</span>
+          <span><i class="dot working"></i>กำลังดำเนินการ</span>
+          <span><i class="dot completed"></i>ดำเนินการเสร็จสิ้น</span>
+        </div>
+      </div>
+    </section>
+
+    <aside class="privacy">
+      <span class="privacy-icon">i</span>
+      <p><strong>การคุ้มครองข้อมูลส่วนบุคคล</strong><br>
+        ข้อมูลผู้แจ้งใช้เพื่อการประสานงานและแก้ไขปัญหาเท่านั้น
+        ควรจำกัดสิทธิ์การเข้าถึงเฉพาะเจ้าหน้าที่ที่เกี่ยวข้อง
+      </p>
+    </aside>
+  </main>
+
+  <footer>
+    <strong>SWU Voice</strong>
+    <span>ระบบร้องเรียนแจ้งปัญหาภายในมหาวิทยาลัย</span>
+  </footer>
+
+  
+<script src="./script.js"></script>
+<script>
+  // สลับหน้าเมื่อกดการ์ดบริการ
+  document.querySelectorAll(".service-card").forEach(card => {
+    card.addEventListener("click", () => {
+      document.querySelectorAll(".service-card").forEach(item => {
+        item.classList.toggle("selected", item === card);
+      });
+
+      document.querySelectorAll("#report, #track").forEach(section => {
+        section.hidden = section.id !== card.dataset.page;
+      });
+
+      document.querySelectorAll(".tab").forEach(tab => {
+        tab.classList.toggle(
+          "active",
+          tab.dataset.page === card.dataset.page
+        );
+      });
+    });
+  });
+</script>
+</body>
+</html>
+
